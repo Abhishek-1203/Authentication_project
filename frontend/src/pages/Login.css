@@ -1,0 +1,97 @@
+/* Page container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.login-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Input fields */
+.login-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+}
+
+/* Button */
+.login-button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: #0056b3;
+}
+
+/* Toggle text and button */
+.toggle-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.toggle-btn {
+  margin-left: 5px;
+  border: none;
+  background: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 0;
+}
+
+.toggle-btn:hover {
+  color: #0056b3;
+}
+.login-card p{
+  color:gray;
+}
+
+.forgot-password {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  padding: 0;
+  align-self: flex-start; /* align to the left */
+}
+
+.forgot-password:hover {
+  color: #0056b3;
+}
