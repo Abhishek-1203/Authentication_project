@@ -28,8 +28,8 @@ nav button{
     position: relative;
 }
 .profileOptions {
-    opacity: 0;             /* initially invisible */
-    visibility: hidden;     /* prevents it from taking clicks */
+    opacity: 0;           
+    visibility: hidden;   
     width: 180px;
     padding: 10px;
     position: absolute;
@@ -38,11 +38,11 @@ nav button{
     right: 0;
     border-radius: 10px;
     z-index: 100;
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* smooth fade */
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
 }
 
 .profile:hover .profileOptions {
-    opacity: 1;             /* fully visible */
+    opacity: 1;            
     visibility: visible;
 }
 
@@ -58,4 +58,28 @@ nav button{
     color: blue;
     background-color: rgb(249, 245, 245);
     cursor: pointer;
+}
+
+/* mediaqueries */
+@media(max-width:800px){
+    nav{
+        padding:15px 60px;
+    }
+}
+@media(max-width:500px){
+    nav{
+        padding:15px 40px;
+    }
+}
+@media(max-width:430px){
+    nav{
+        padding:15px 20px;
+    }
+
+}
+@media(max-width:320px){
+    nav h2{
+        font-size: 20px;
+    }
+    
 }
