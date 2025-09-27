@@ -14,6 +14,7 @@ export const AppContextProvider = (props) => {
       const { data } = await axios.get(`${backendUrl}/user/isauthenticated`, {
         withCredentials: true, // ✅ Only if you use cookies
       });
+      console.log("hi");
       console.log(data);
       if (data.success) {
         setIsLoggedin(true);
