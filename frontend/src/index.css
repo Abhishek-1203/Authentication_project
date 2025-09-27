@@ -15,3 +15,8 @@
 body{
     background-color: snow;
 }
+@media(max-width:4300px){
+    .btn{
+        padding: 10px 20px;
+    }
+}
