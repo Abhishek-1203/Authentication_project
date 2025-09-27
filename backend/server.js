@@ -12,10 +12,6 @@ const app = express();
 const port = process.env.PORT;
 const allowedOrigins = []
 connectDb();
-app.options('*', cors({
-  origin: 'https://projectauthentication.netlify.app',
-  credentials: true
-}));
 
 
 app.use(express.json());
