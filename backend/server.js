@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
-const allowedOrigins = ['https://projectauthentication.netlify.app/']
+const allowedOrigins = ['https://projectauthentication.netlify.app']
 connectDb();
 
 app.use(express.json());
