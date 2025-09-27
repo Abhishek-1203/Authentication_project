@@ -5,11 +5,11 @@ const userAuth = async (req, res, next) => {
         const token = req.cookies.token;
         console.log(token)
         if (!token) {
-            return res.json({ success: false, message: "Unauthorized hi" });
+            return res.json({ success: false, message: "Unauthorized" });
         }
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         if (!decoded) {
-            return res.json({ success: false, message: "Unauthorized" });
+            return res.json({ success: false, message: "Unauthorized hi" });
         }
         req.body.userId = decoded.id;
         next();
