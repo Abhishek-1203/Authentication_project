@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import User from '../models/usermodel.js';
 import transporter from '../config/nodemailer.js';
+import axios from 'axios';
 
 export const register = async (req, res) => {
     const { name, email, password } = req.body;
@@ -25,20 +26,20 @@ export const register = async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000
         });
         await axios.post(
-      "https://api.brevo.com/v3/smtp/email",
-      {
-        sender: { email: "thecapdairy@gmail.com" ,
-        to: [{ email: email }],
-        subject: "Authentication",
-        htmlContent: `<b>Welcome to Authentication website</b>`,
-      },
-      {
-        headers: {
-          "api-key": process.env.BREVO_API_KEY,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  "https://api.brevo.com/v3/smtp/email",
+  {
+    sender: { email: "thecapdairy@gmail.com" },
+    to: [{ email: email }],
+    subject: "Authentication",
+    htmlContent: `<b>Welcome to Authentication website</b>`,
+  },
+  {
+    headers: {
+      "api-key": process.env.BREVO_API_KEY,
+      "Content-Type": "application/json",
+    },
+  }
+);
         res.json({ success: true, message: "user registered successfully" });
 
     } catch (error) {
