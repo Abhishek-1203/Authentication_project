@@ -1,3 +1,4 @@
+
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import User from '../models/usermodel.js';
@@ -25,7 +26,7 @@ export const register = async (req, res) => {
         });
         (async () => {
             const info = await transporter.sendMail({
-                from: '"Abhishek"<hellodairy17@gmail.com>',
+                from: '"Abhishek"<thecapdairy@gmail.com>',
                 to: email,
                 subject: "Authentication website",
                 html: "<b>Welcome to authentication website</b>",
@@ -94,7 +95,7 @@ export const sendVerificationEmail = async (req, res) => {
         await user.save();
         (async () => {
             const info = await transporter.sendMail({
-                from: '"Authentiaction"<hellodairy17@gmail.com>',
+                from: '"Authentiaction"<thecapdairy@gmail.com>',
                 to: user.email,
                 subject: "Verification OTP",
                 html: `<b>your account verification otp is ${otp}</b>`,
@@ -161,7 +162,7 @@ export const sendResetOtp = async (req, res) => {
         await user.save();
         (async () => {
             const info = await transporter.sendMail({
-                from: '"Abhishek"<hellodairy17@gmail.com>',
+                from: '"Abhishek"<thecapdairy@gmail.com>',
                 to: user.email,
                 subject: "Reset password OTP",
                 html: `<b>your password reset otp is ${otp}</b>`,
